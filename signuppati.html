@@ -1,0 +1,109 @@
+
+			<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Patient Registration Form </title>
+	<link rel="shortcut icon" href="img/icons8-user-48.png">
+	<!-- Stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main1.css">
+</head>
+
+<body>
+	<div class="container" style="margin-bottom: 3em; margin-top: 3em;">
+		<form action="#" method="post">
+			<h3 id="sub-heading">Patient Details</h3>
+			<div class="form-row">
+				<div class="main-flex-w3ls-sectns">
+				<div class="form-group col-md-6">
+					<input type="text" name="Name" placeholder="First Name" required="">
+				</div>
+				<div class="form-group col-md-6">
+					<input type="text" name="Name" placeholder="Last Name" required="">
+				</div>
+			</div>
+			<div class="main-flex-w3ls-sectns">
+				<div class="form-group col-md-6">
+					<input type="email" name="Email" placeholder="Email" required="">
+				</div>
+				<div class="form-group col-md-6">
+					<input type="text" name="Phone no" placeholder="Phone Number" required="">
+				</div>
+			</div>
+			<div class="main-flex-w3ls-sectns">
+				<div class="form-group col-md-6">
+					<input id="datepicker" name="Text" type="text" placeholder="DOB" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
+					    required="">
+				</div>
+				<div class="form-group col-md-6">
+					<select id="inputState" style="margin-top: 3px;" >
+						<option>Gender</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</div>
+			</div>
+                <div class="form-group col-md-12">
+					<input type="text"  id="inputAddress" placeholder="Your address" name="address" required>
+				</div>
+                <div class="form-group col-md-6">
+					<input type="text"  id="inputCity" placeholder="City" name="city" required>
+				</div>
+			<div class="main-flex-w3ls-sectns">
+				<div class="form-group col-md-6">
+					<input type="text" name="Height" placeholder="Height (CM)" required="">
+				</div>
+				<div class="form-group col-md-6">
+					<input type="text" name="Weight" placeholder="Weight (Kg)" required="">
+				</div>
+			</div>
+			<div class="main-flex-w3ls-sectns">
+				<div class="form-group col-md-6">
+					<select id="inputState" >
+						<option>Blood Group</option>
+						<option value="A-">A-</option>
+						<option value="A+">A+</option>
+						<option value="B-">B-</option>
+                        <option value="B+">B+</option>
+                     <option value="AB-">AB-</option>
+                        <option value="AB+">AB+</option>
+                         <option value="O-">O-</option>
+                         <option value="O+">O+</option>
+					</select>
+				</div>
+			</div>
+			<small style="margin-left: 17px;">Already have an account? </small><a href="login.html" class="signup">Login</a>
+			<div class="form-group">
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" value="" id="invalidCheck" autocomplete="off" required>
+					<label class="form-check-label" for="invalidCheck">
+						Agree to terms and conditions
+					</label>
+				</div>
+			</div>	
+			
+			<input type="submit" value="Sign Up">
+	<!--------------------------------------------------------->
+	<script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<Script>
+		var password = document.getElementById("inputPassword4")
+		, confirm_password = document.getElementById("inputPassword04");
+
+		function validatePassword(){
+			if(password.value != confirm_password.value){
+				confirm_password.setCustomValidity("Passwords Don't Match");
+			} 
+			else {
+				confirm_password.setCustomValidity('');
+			}
+		}
+		password.onchange = validatePassword;
+		confirm_password.onkeyup = validatePassword;
+	</Script>
+</body>
+
+</html>
+			
